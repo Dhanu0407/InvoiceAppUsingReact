@@ -1,13 +1,13 @@
 
-export default function Dates(){
+export default function Dates({invoiceNumber,invoiceDate,dueDate}){
     return(
         <>
         {/*Dates */}
 <article className="my-5 flex items-end justify-end">
 <ul>
-  <li><span className="font-bold">Invoice Number:</span></li>
-  <li><span className="font-bold">Invoice Date:</span></li>
-  <li><span className="font-bold">Due Date:</span></li>
+  <li className="p-1 "><span className="font-bold">Invoice Number:</span>{invoiceNumber}</li>
+  <li className="p-1 bg-gray-100"><span className="font-bold">Invoice Date:</span>{invoiceDate}</li>
+  <li className="p-1 "><span className="font-bold">Due Date:</span>{dueDate}</li>
 </ul>
 </article>
 {/* End of dates */}
