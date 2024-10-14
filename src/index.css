@@ -16,7 +16,7 @@ label{
   margin-bottom: 0.3rem;
   font-size: 1.05rem;
   font-weight: bold;
-  color: #112827;
+  color: #b66809;
 }
 input,
 textarea {
@@ -29,6 +29,7 @@ textarea {
 }
 button{
   user-select: none;
+  background-color: #fd7105ea;
 }
 .footer li{
   margin:0.5rem 0.2rem;

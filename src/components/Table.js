@@ -48,7 +48,7 @@ export default function Table({ list, subtotal, taxRate, discount, total,currenc
         </div>
         <div className="flex justify-between">
           <h2 className="text-gray-800 font-bold">Total:</h2>
-          <h2 className="text-gray-800">Kshs. {finalTotal.toFixed(2)}</h2>
+          <h2 className="text-gray-800">Total. {finalTotal.toFixed(2)}</h2>
         </div>
       </div>
     </>

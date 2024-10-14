@@ -85,7 +85,7 @@ export default function TableForm({description,setDescription,quantity,setQuanti
                 <p>{amount}</p>
           </div> 
          </div>
-         <button type="submit" className="mb-5 bg-blue-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-blue-500 hover:bg-transparent hover:text-blue-500 transition-all duration-300">{isEditing?"Edit Item":"Add Item"}</button>
+         <button type="submit" className="mb-5 bg-darkgoldenrod-500 text-black font-bold py-2 px-8 rounded shadow border-2 border-darkgoldenrod-500 hover:bg-transparent hover:text-darkgoldenrod-500 transition-all duration-300">{isEditing?"Edit Item":"Add Item"}</button>
          </form>
 
          <table width="100%" className="mb-10">
@@ -116,7 +116,7 @@ export default function TableForm({description,setDescription,quantity,setQuanti
             ))}
             </table>
          <div>
-            <h2 className="flex items-end justify-end text-gray-800 text-4xl font-bold">kshs.{total.toLocaleString()}</h2>
+            <h2 className="flex items-end justify-end text-gray-800 text-4xl font-bold">Total:{total.toLocaleString()}</h2>
          </div>
         </>
     )

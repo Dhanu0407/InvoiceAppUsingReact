@@ -63,13 +63,13 @@ function App() {
           <>
             <button
               onClick={handlePrint}
-              className="mb-5 bg-blue-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-blue-500 hover:bg-transparent hover:text-blue-500 transition-all duration-300"
+              className="mb-5 bg-darkgoldenrod-500 text-black font-bold py-2 px-8 rounded shadow border-2 border-darkgoldenrod-500 hover:bg-transparent hover:text-darkgoldenrod-500 transition-all duration-300"
             >
               Print/Download
             </button>
 
-            <div ref={componentRef}>
-              <Header logo={logo} setLogo={setLogo}/>
+       <div ref={componentRef}>
+        <Header logo={logo} setLogo={setLogo}/>
               <MainDetails name={name} address={address} />
               <ClientDetails clientName={clientName} clientAddress={clientAddress} />
               <Dates invoiceNumber={invoiceNumber} invoiceDate={invoiceDate} dueDate={dueDate} />
@@ -79,9 +79,8 @@ function App() {
             </div>
             <button
               onClick={() => setShowInvoice(false)}
-              className="mt-5 bg-blue-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-blue-500 hover:bg-transparent hover:text-blue-500 transition-all duration-300"
-            >
-              Edit
+              className="mt-5 bg-darkgoldenrod-500 text-black font-bold py-2 px-8 rounded shadow border-2 border-darkgoldenrod-500 hover:bg-transparent hover:text-darkgoldenrod-500 transition-all duration-300"
+            >            Edit
             </button>
           </>
         ) : (
@@ -96,7 +95,7 @@ function App() {
                     id="name"
                     placeholder="Enter your name"
                     autoComplete="off"
-                    value={name}
+               value={name}
                     onChange={(e) => setName(e.target.value)}
                   />
                 </div>
@@ -118,7 +117,7 @@ function App() {
                 <label htmlFor="logo">Upload Company Logo:</label>
                 <input type="file" id="logo" accept="image/*" onChange={handleLogoUpload} />
               </article>
-              <article className="md:grid grid-cols-3 gap-10 ">
+      <article className="md:grid grid-cols-3 gap-10 ">
                 <div className="flex flex-col">
                   <label htmlFor="email">Enter your email</label>
                   <input
@@ -131,8 +130,7 @@ function App() {
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
-
-                <div className="flex flex-col">
+                                <div className="flex flex-col">
                   <label htmlFor="website">Enter your Website</label>
                   <input
                     type="url"
@@ -214,7 +212,7 @@ function App() {
                 </div>
               </article>
 
-              <article className="md:grid grid-cols-3 ">
+              <article className="md:grid grid-cols-3 gap-10 ">
                 <div className="flex flex-col">
                   <label htmlFor="invoiceNumber">Invoice Number: </label>
                   <input
@@ -320,7 +318,7 @@ function App() {
                   setTotal(subtotal + taxAmount - discountAmount);
                   setShowInvoice(true);
                 }}
-                className="bg-blue-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-blue-500 hover:bg-transparent hover:text-blue-500 transition-all duration-300"
+                className="bg-darkgoldenrod-500 text-black font-bold py-2 px-8 rounded shadow border-2 border-darkgoldenrod-500 hover:bg-transparent hover:text-darkgoldenrod-500 transition-all duration-300"
               >
                 Preview Invoice
               </button>
