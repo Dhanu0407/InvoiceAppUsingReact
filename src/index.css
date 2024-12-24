@@ -34,3 +34,16 @@ button{
 .footer li{
   margin:0.5rem 0.2rem;
 }
+@media print {
+  .no-print {
+    display: none;
+  }
+}
+.address-input {
+  width: 100%;
+  word-wrap: break-word; /* Ensures the text wraps */
+  overflow-wrap: break-word; /* Additional support for wrapping */
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+}

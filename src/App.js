@@ -11,6 +11,7 @@ import ReactToPrint from "react-to-print";
 
 function App() {
   const [showInvoice, setShowInvoice] = useState(false);
+  
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
   const [email, setEmail] = useState("");
@@ -63,7 +64,7 @@ function App() {
           <>
             <button
               onClick={handlePrint}
-              className="mb-5 bg-darkgoldenrod-500 text-black font-bold py-2 px-8 rounded shadow border-2 border-darkgoldenrod-500 hover:bg-transparent hover:text-darkgoldenrod-500 transition-all duration-300"
+              className="mb-5 bg-darkgoldenrod-500 text-black font-bold py-2 px-8 rounded shadow border-2 border-darkgoldenrod-500 hover:bg-transparent hover:text-darkgoldenrod-500 transition-all duration-300 no-print"
             >
               Print/Download
             </button>
@@ -79,7 +80,7 @@ function App() {
             </div>
             <button
               onClick={() => setShowInvoice(false)}
-              className="mt-5 bg-darkgoldenrod-500 text-black font-bold py-2 px-8 rounded shadow border-2 border-darkgoldenrod-500 hover:bg-transparent hover:text-darkgoldenrod-500 transition-all duration-300"
+              className="mt-5 bg-darkgoldenrod-500 text-black font-bold py-2 px-8 rounded shadow border-2 border-darkgoldenrod-500 hover:bg-transparent hover:text-darkgoldenrod-500 transition-all duration-300 no-print"
             >            Edit
             </button>
           </>
@@ -109,6 +110,7 @@ function App() {
                     autoComplete="off"
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
+                    className="address-input"
                   />
                 </div>
               </article>
@@ -326,6 +328,32 @@ function App() {
           </>
         )}
       </main>
+      <style jsx="true">{`
+  @media print {
+    .no-print {
+      display: none;
+    }
+
+    
+    @page {
+      margin: 0;
+    }
+
+    
+    body {
+      -webkit-print-color-adjust: exact; /* Ensures colors are printed accurately */
+      margin: 0;
+    }
+
+  
+
+   
+    .page-break::after {
+      content: "";
+    }
+  }
+`}</style>
+
     </>
   );
 }
