@@ -1,0 +1,111 @@
+/* Add Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.business-services {
+  font-family: 'Poppins', Arial, sans-serif; /* Use Poppins font */
+  padding: 2rem;
+  text-align: center;
+}
+
+.business-services h1 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.highlight {
+  color: #e63946;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Explicitly set 4 columns */
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%; /* Ensure the container takes up the full screen width */
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.service-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 2rem; /* Increased padding for more space inside the card */
+  text-align: left;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.5s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: #333;
+  min-height: 250px; /* Increased minimum height */
+  opacity: 0; /* Start hidden for the sliding transition */
+  transform: translateY(30px); /* Initial position for the sliding effect */
+}
+
+/* Sliding transition for cards */
+.service-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.service-card h2 {
+  font-size: 1.5rem; /* Increased font size */
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  font-size: 1rem; /* Increased font size */
+  color: #555;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-card:hover h2 {
+  color: #e63946;
+}
+
+@media (max-width: 768px) {
+  .business-services h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Sliding Animation for Image */
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Sliding Animation for Text */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply Animation for the Image Section */
+.image-section {
+  animation: slideInFromBottom 1s ease-out;
+}
+
+/* Apply Animation for the Text Section */
+.text-section {
+  animation: slideInFromLeft 1s ease-out;
+}

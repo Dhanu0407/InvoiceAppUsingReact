@@ -1,0 +1,35 @@
+.features-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background: #F5F9FF; Light blue background similar to the image */
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+  .feature-card {
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    padding: 1.5rem;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+  }
+  .feature-card:hover {
+    transform: translateY(-10px);
+  }
+  .icon {
+    font-size: 2rem;
+    color: #4C6EF5; /* Blue color for icons */
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 0.75rem;
+  }
+  p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }

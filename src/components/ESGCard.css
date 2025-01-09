@@ -1,0 +1,71 @@
+.esg-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #080000fa; /* Black background for contrast */
+  color: #fff; /* White text */
+  padding: 20px;
+  gap: 20px;
+  overflow: hidden;
+  position: relative;
+  opacity: 0; /* Start hidden */
+  transform: translateY(50px); /* Move down slightly */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.esg-card.visible {
+  opacity: 1; /* Make visible */
+  transform: translateY(0); /* Move to original position */
+}
+
+.image-section1 {
+  flex: 1;
+  animation: slideInFromLeft 1.5s ease-out forwards;
+}
+
+.building-image1 {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.text-section1 {
+  flex: 1;
+  padding: 20px;
+  animation: slideInFromRight 1.5s ease-out forwards;
+}
+
+.text-section1 h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  background-color: black;
+}
+
+.text-section1 p {
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  background-color: black;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
